@@ -5,6 +5,6 @@
 __pycache__/
 *.py[cod]
 
-# ignore review directory, except demo
+# ignore all review subdirectories, except demo
 review/
 !review/demo/
