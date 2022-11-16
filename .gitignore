@@ -1,0 +1,10 @@
+# ignore mac files
+*.DS_Store
+
+# ignore python cache files
+__pycache__/
+*.py[cod]
+
+# ignore review directory, except demo
+review/
+!review/demo/

@@ -1,0 +1,140 @@
+Title,DOI_URL,Venue,Year,Authors,Abstract,Takeaway,Teaching_(1-3),Teaching_Explanation,Evaluating_(1-3),Evaluating_Explanation,Design_(1-3),Design_Explanation,Explainability_(1-3),Explainability_Explanation
+Heuristic evaluation of user interfaces,https://doi.org/10.1145/97243.97281,0.0,1990,Jukob Nielsen and Rolf Molich,"Heuristic evaluation is an informal method of usability analysis where a number of evaluators are presented with an interface design and asked to comment on it. Four experiments showed that individual evaluators were mostly quite bad at doing such heuristic evaluations and that they only found between 20 and 51% of the usability problems in the interfaces they evaluated. On the other hand, we could aggregate the evaluations from several evaluators to a single evaluation and such aggregates do rather well, even when they consist of only three to five people.","The labelling task will certainly require redundancy and supervision. Presents the opportunity to create a human-in-the-loop evaluation tool, at a much lower complexity than an interactive UI design tool -- at least for now.",2,0.0,3,0.0,2.0,0.0,1,0.0
+AndroZoo: Collecting Millions of Android Apps for the Research Community,https://ieeexplore.ieee.org/abstract/document/7832927/authors#authors,0.0,2016,"Kevin Allix, Tegawendé F. Bissyandé, Jacques Klein, Yves Le Traon","We present a growing collection of Android Applications col-lected from several sources, including the official GooglePlay app market. Our dataset, AndroZoo, currently contains more than three million apps, each of which has beenanalysed by tens of different AntiVirus products to knowwhich applications are detected as Malware. We provide thisdataset to contribute to ongoing research efforts, as well asto enable new potential research topics on Android Apps.By releasing our dataset to the research community, we alsoaim at encouraging our fellow researchers to engage in reproducible experiments.","Another potential dataset -- doesn't have the metadata or user traces, but is massive and may be useful for expanding test set / writing paper. Widely used, especially before widespread use of RICO",1,0.0,1,0.0,1.0,0.0,1,0.0
+Automatic Graphics Program Generation using Attention-Based Hierarchical Decoder,google.com,0.0,2018,"Zhihao Zhu, Zhan Xue, and Zejian Yuan","
+                        Recent progress on deep learning has made it possible to au- tomatically transform the screenshot of Graphic User Interface (GUI) into code by using the encoder-decoder framework. While the commonly adopted image encoder (e.g., CNN network), might be capable of ex- tracting image features to the desired level, interpreting these abstract image features into hundreds of tokens of code puts a particular challenge on the decoding power of the RNN-based code generator. Considering the code used for describing GUI is usually hierarchically structured, we propose a new attention-based hierarchical code generation model, <b>which</b> can describe GUI images in a finer level of details, while also being able to generate hierarchically structured code in consistency with the hierar- chical layout of the graphic elements in the GUI. Our model follows the encoder-decoder framework, all the components of which can be trained jointly in an end-to-end manner. The experimental results show that our method outperforms other current state-of-the-art methods on both a publicly available GUI-code dataset as well as a dataset established by our own.
+                    ",Screenshot to code in case we want to do a visual-only dataset (or maybe extend to physical interfaces -- not sure how generalizable?) Could be interesting when combined with code2vec,1,0.0,1,0.0,1.0,0.0,1,0.0
+ERICA: Interaction Mining Mobile Apps,https://interactionmining.org/erica,0.0,2016,"Biplab Deka, Zifeng Huang, and Ranjitha Kumar","
+                        Design plays an important role in adoption of apps. App design, however, is a complex process with multiple design activities. To enable data-driven app design applications, we present interaction mining – capturing both static (UI layouts, visual details) and dynamic (user flows, motion details) components of an app’s design. We present ERICA, a system that takes a scalable, human-computer approach to interaction mining existing Android apps without the need to modify them in any way. As users interact with apps through ERICA, it detects UI changes, seamlessly records multiple data-streams in the background, and unifies them into a user interaction trace. Using ERICA we collected interaction traces from over a thousand popular Android apps. Leveraging this trace data, we built machine learning classifiers to detect elements and layouts indicative of 23 common user flows. User flows are an important component of UX design and consists of a sequence of UI states that represent semantically meaningful tasks such as searching or composing. With these classifiers, we identified and indexed more than 3000 flow examples, and released the largest online search engine of user flows in Android apps.Here ois stuff thjat I am changing<br>","Computer-aided generation of user traces, resulted in generation of large dataset and search engine for android app traces, could be useful when temporally dependent UI features are implemented + could find similar apps to give students examples",1,0.0,2,0.0,2.0,0.0,1,0.0
+SUGILITE: Creating Multimodal Smartphone Automation by Demonstration,https://toby.li/files/TobyLi-CHI2017-Sugilite.pdf,0.0,2017,"Toby Jia-Jun Li 1 , Amos Azaria 2 , and Brad A. Myers 1","S UGILITE is a new programming-by-demonstration (PBD) system that enables users to create automation on smartphones. S UGILITE uses Android’s accessibility API to support automating arbitrary tasks in any Android app (or even across multiple apps). When the user gives verbal commands that S UGILITE does not know how to execute, the user can demonstrate by directly manipulating the regu- lar apps’ user interface. By leveraging the verbal instruc- tions, the demonstrated procedures, and the apps’ UI hierar- chy structures, S UGILITE can automatically generalize the script from the recorded actions, so S UGILITE learns how to perform tasks with different variations and parameters from a single demonstration. Extensive error handling and con- text checking support forking the script when new situa- tions are encountered, and provide robustness if the apps change their user interface. Our lab study suggests that us- ers with little or no programming knowledge can success- fully automate smartphone tasks using S UGILITE .","Programming by demonstration, automatically create UI automation from screen recording. Need to look more into it -- has a lot of insight in combining DOM / Image ""A PBD script generalization mechanism that leverages
+the verbal command, the recorded actions, and recorded
+information about the UI hierarchy structures of the
+third-party apps to create a generalized program from a
+single demonstration. The system also has a representa-
+tion of the recordings that allows users to manually edit
+scripts if necessary.""",1,0.0,1,0.0,1.0,0.0,3,0.0
+Screen2Words: Automatic Mobile UI Summarization with Multimodal Learning,https://doi.org/10.48550/arXiv.2108.03353,0.0,2018,"Bryan Wang, Gang Li, Xin Zhou, Zhourong Chen, Tovi Grossman, Yang Li","Mobile User Interface Summarization generates succinct language descriptions
+of mobile screens for conveying important contents and functionalities of the
+screen, which can be useful for many language-based application scenarios. We
+present Screen2Words, a novel screen summarization approach that automatically
+encapsulates essential information of a UI screen into a coherent language
+phrase. Summarizing mobile screens requires a holistic understanding of the
+multi-modal data of mobile UIs, including text, image, structures as well as UI
+semantics, motivating our multi-modal learning approach. We collected and
+analyzed a large-scale screen summarization dataset annotated by human workers.
+Our dataset contains more than 112k language summarization across ∼22k
+unique UI screens. We then experimented with a set of deep models with
+different configurations. Our evaluation of these models with both automatic
+accuracy metrics and human rating shows that our approach can generate
+high-quality summaries for mobile screens. We demonstrate potential use cases
+of Screen2Words and open-source our dataset and model to lay the foundations
+for further bridging language and user interfaces.","Generates a verbal description of a UI -- for example, this is a search page for hotels in san francisco. Could be useful in determining the purpose of various screens. Compare to screen2vec?",2,0.0,3,0.0,1.0,0.0,3,0.0
+VUT: Versatile UI Transformer for Multi-Modal Multi-Task User Interface Modeling,https://doi.org/10.48550/arXiv.2112.05692,0.0,2021,"Yang Li, Gang Li, Xin Zhou, Mostafa Dehghani, Alexey Gritsenko","User interface modeling is inherently multimodal, which involves several
+distinct types of data: images, structures and language. The tasks are also
+diverse, including object detection, language generation and grounding. In this
+paper, we present VUT, a Versatile UI Transformer that takes multimodal input
+and simultaneously accomplishes 5 distinct tasks with the same model. Our model
+consists of a multimodal Transformer encoder that jointly encodes UI images and
+structures, and performs UI object detection when the UI structures are absent
+in the input. Our model also consists of an auto-regressive Transformer model
+that encodes the language input and decodes output, for both question-answering
+and command grounding with respect to the UI. Our experiments show that for
+most of the tasks, when trained jointly for multi-tasks, VUT substantially
+reduces the number of models and footprints needed for performing multiple
+tasks, while achieving accuracy exceeding or on par with baseline models
+trained for each individual task.","Combines serveral sources of input to generate a number of different useful automated tasks -- for example, UI Object detection, command grounding, question and answer transformer",1,0.0,3,0.0,1.0,0.0,3,0.0
+Widget Captioning: Generating Natural Language Description for Mobile User Interface Elements,https://doi.org/10.48550/arXiv.2010.04295,0.0,2020,"Yang Li, Gang Li, Luheng He, Jingjie Zheng, Hong Li, Zhiwei Guan","Natural language descriptions of user interface (UI) elements such as
+alternative text are crucial for accessibility and language-based interaction
+in general. Yet, these descriptions are constantly missing in mobile UIs. We
+propose widget captioning, a novel task for automatically generating language
+descriptions for UI elements from multimodal input including both the image and
+the structural representations of user interfaces. We collected a large-scale
+dataset for widget captioning with crowdsourcing. Our dataset contains 162,859
+language phrases created by human workers for annotating 61,285 UI elements
+across 21,750 unique UI screens. We thoroughly analyze the dataset, and train
+and evaluate a set of deep model configurations to investigate how each feature
+modality as well as the choice of learning strategies impact the quality of
+predicted captions. The task formulation and the dataset as well as our
+benchmark models contribute a solid basis for this novel multimodal captioning
+task that connects language and user interfaces.","Very similar to screen describing project (screen2words), but more targeted, maybe useful for error screen detection and other element determination. Good dataset analysis.",1,0.0,3,0.0,1.0,0.0,3,0.0
+Eye Tracking to Understand Impact of Aging on Mobile Phone Applications,https://doi.org/10.48550/arXiv.2101.00792,0.0,2021,"Antony William Joseph, Jeevitha Shree DV, Kamal Preet Singh Saluja, Abhishek Mukhopadhyay, Ramaswami Murugesh, Pradipta Biswas","Usage of smartphones and tablets have been increasing rapidly with
+multi-touch interaction and powerful configurations. Performing tasks on mobile
+phones become more complex as people age, thereby increasing their cognitive
+workload. In this context, we conducted an eye tracking study with 50
+participants between the age of 20 to 60 years and above, living in Bangalore,
+India. This paper focuses on visual nature of interaction with mobile user
+interfaces. The study aims to investigate how aging affects user experience on
+mobile phones while performing complex tasks, and estimate cognitive workload
+using eye tracking metrics. The study consisted of five tasks that were
+performed on an android mobile phone under naturalistic scenarios using eye
+tracking glasses. We recorded ocular parameters like fixation rate, saccadic
+rate, average fixation duration, maximum fixation duration and standard
+deviation of pupil dilation for left and right eyes respectively for each
+participant. Results from our study show that aging has a bigger effect on
+performance of using mobile phones irrespective of any complex task given to
+them. We noted that, participants aged between 50 to 60+ years had difficulties
+in completing tasks and showed increased cognitive workload. They took longer
+fixation duration to complete tasks which involved copy-paste operations.
+Further, we identifed design implications and provided design recommendations
+for designers and manufacturers.","Uses eye-tracking to determine sources of difficulty for people visually or cognitively as they age, some design implications and guidelines for the future. Maybe use in conjunction w Nielson?",1,0.0,2,0.0,2.0,0.0,1,0.0
+Path Aggregation Network for Instance Segmentation,https://doi.org/10.48550/arXiv.1803.01534,0.0,2018,"Shu Liu, Lu Qi, Haifang Qin, Jianping Shi, Jiaya Jia","The way that information propagates in neural networks is of great
+importance. In this paper, we propose Path Aggregation Network (PANet) aiming
+at boosting information flow in proposal-based instance segmentation framework.
+Specifically, we enhance the entire feature hierarchy with accurate
+localization signals in lower layers by bottom-up path augmentation, which
+shortens the information path between lower layers and topmost feature. We
+present adaptive feature pooling, which links feature grid and all feature
+levels to make useful information in each feature level propagate directly to
+following proposal subnetworks. A complementary branch capturing different
+views for each proposal is created to further improve mask prediction. These
+improvements are simple to implement, with subtle extra computational overhead.
+Our PANet reaches the 1st place in the COCO 2017 Challenge Instance
+Segmentation task and the 2nd place in Object Detection task without
+large-batch training. It is also state-of-the-art on MVD and Cityscapes. Code
+is available at this https URL","Massive improvement for instance segmentation, generally for CV, not UI evaluation, but could be useful if element segmentation becomes difficult (but probably not)",0,0.0,0,0.0,0.0,0.0,0,0.0
+PUMICE: A Multi-Modal Agent that Learns Concepts and Conditionals from Natural Language and Demonstrations,https://doi.org/10.1145/3332165.3347899,0.0,2019,"Toby Jia-Jun, Marissa Radensky, Justin Jia, Kirielle Singarajah, Tom M. Mitchell, Brad A. Myers","Natural language programming is a promising approach to enable end users to instruct new tasks for intelligent agents. However, our formative study found that end users would often use unclear, ambiguous or vague concepts when naturally instructing tasks in natural language, especially when specifying conditionals. Existing systems have limited support for letting the user teach agents new concepts or explaining unclear concepts. In this paper, we describe a new multi-modal domain-independent approach that combines natural language programming and programming-by-demonstration to allow users to first naturally describe tasks and associated conditions at a high level, and then collaborate with the agent to recursively resolve any ambiguities or vagueness through conversations and demonstrations. Users can also define new procedures and concepts by demonstrating and referring to contents within GUIs of existing mobile apps. We demonstrate this approach in PUMICE, an end-user programmable agent that implements this approach. A lab study with 10 users showed its usability.",0,0,0.0,0,0.0,0.0,0.0,0,0.0
+A Systematic and Generalizable Approach to the Heuristic Evaluation of User Interfaces,https://doi.org/10.1080/10447318.2018.1424101,0.0,2018,"David Alonso-Ríos, Eduardo Mosqueira-Rey & Vicente Moret-Bonillo","Heuristic evaluation is one of the most actively used techniques for analyzing usability, as it is quick and inexpensive. This technique is based on following a given set of heuristics, which are typically defined as broad rules of thumb. In this paper, we propose a systematic and generalizable approach to this type of evaluation based on using comprehensive taxonomies as a source for the heuristics. This approach contrasts with other typical approaches, such as following (or adapting) Jakob Nielsen’s heuristics or creating ad hoc heuristics (formally or informally). The usefulness of our approach is investigated in two ways. Firstly, we carry out an actual heuristic evaluation of a mobile app in this manner, which we describe in detail. Secondly, we compare our approach and Nielsen’s. Additionally, we identify some limitations in Nielsen’s heuristics and some inconsistencies between them and established usability models, including Nielsen’s own.",0,0,0.0,0,0.0,0.0,0.0,0,0.0
+The state of the art in automating usability evaluation of user interfaces,https://doi.org/10.1145/503112.503114,0.0,2001,MELODY Y. IVORY AND MARTI A. HEARST,"Usability evaluation is an increasingly important part of the user interface designprocess. However, usability evaluation can be expensive in terms of time and humanresources, and automation is therefore a promising way to augment existingapproaches. This article presents an extensive survey of usability evaluation methods,organized according to a new taxonomy that emphasizes the role of automation. Thesurvey analyzes existing techniques, identifies which aspects of usability evaluationautomation are likely to be of use in future research, and suggests new ways to expandexisting approaches to better support usability evaluation.",0,0,0.0,0,0.0,0.0,0.0,0,0.0
+Software Prototype for the Ensemble of Automated Accessibility Evaluation Tools,https://link.springer.com/chapter/10.1007/978-3-031-06417-3_71,0.0,2022,Peter Johnson & Mariana Lilley,"Web accessibility evaluation is concerned with assessing the extent to which web content meets accessibility guidelines. Web accessibility evaluation is typically conducted using manual inspection, user testing and automated testing. The process of automating aspects of accessibility evaluation is of interest to accessibility evaluation practitioners due to manual evaluations requiring substantial time and effort [1]. The use of multiple evaluation tools is recommended [9, 9]; however, aggregating and summarising the results from multiple tools can be challenging [1].
+
+This paper presents a Python software prototype for the automatic ensemble of web accessibility evaluation tools. The software prototype performs website accessibility evaluations against the WCAG 2.1 AA guidelines by utilising a combination of four free and commercial evaluation tools. The results from the tools are aggregated and presented in a report for evaluation.
+
+The tool enables practitioners to benefit from a coherent report of the findings of different accessibility conformance testing tools, without having to run each separately and then manually combine the results of the tests. Thus, it is envisaged that the tool will provide practitioners with reliable data about unmet accessibility guidelines in an efficient manner.",0,0,0.0,0,0.0,0.0,0.0,0,0.0
+Automated Tools for Usability Evaluation: A Systematic Mapping Study,https://link.springer.com/chapter/10.1007/978-3-031-05061-9_3,0.0,2022,"John W. Castro, Ignacio Garnica, & Luis A. Rojas","Usability is one of the most critical indicators in determining the quality of a software product. It corresponds to how users can use a software system to achieve specific objectives with effectiveness, efficiency, and satisfaction. A usability evaluation is necessary to ensure that the software system is usable, but this has certain disadvantages (e.g., a high cost of time and budget for the evaluation to be implemented). While these disadvantages can be a bit daunting despite the benefits they provide, some tools can automatically generate and support usability testing. We conducted a systematic mapping study to identify the tools that support automatic usability evaluation. We identified a total of 15 primary studies. In addition, we classify the tools into four categories: measure usability, support usability evaluation, detect usability problems, and correct usability problems. We identified that the automatic evaluation of the usability of web platforms and mobile devices is the most interesting.",0,0,0.0,0,0.0,0.0,0.0,0,0.0
+Feedback Generation for Automatic User Interface Design Evaluation,https://link.springer.com/chapter/10.1007/978-3-031-11513-4_4,0.0,2021,Jenny Ruiz & Monique Snoeck,"aroviding individual feedback is remarkable: it is a time-consuming task and requires a fair amount of expertise. This paper presents the Feedback ENriched user Interface Simaaaaulation (FENIkS) as a solution to this problem. FENIkS is a UI design simulation tool, based on model-driven engineering. The students design the UI through different models while automatically receiving feedback on how deign principles have been applied through several options. From the models it is possible to generate a working prototype, enriched with feedback that explains the application of design principles. This paper describes the foundations of FENIkS for the automatic UI design evaluation that further allows generating automatic feedback. It explains FENIkS’ design: the meta-model and how design options, design principles and types of feedback are used to automatically generate feedback. The perceived usability was positive evaluated. The results of the experimental evaluation demonstrated that FENIkS improves students’ understanding of design principles.
+                    
+                    
+                    
+                    ",https://link.springer.com/chapter/10.1007/978-3-031-11513-4_4/tables/3,0,0.0,0,0.0,0.0,0.0,0,0.0
+Deep learning for automatic usability evaluations based on images: A case study of the usability heuristics of thermostats,https://doi.org/10.1016/j.enbuild.2017.12.043,0.0,2018,"Pedro Ponce, David Balderas, Therese Peffer, Arturo Molina","Thermostats are designed for increasing requirements on indoor thermal comfort. Nevertheless, they are critical devices for saving energy in buildings and households. However, when thermostats do not accomplish the usability requirements, the end-users do not save energy. Then, when a thermostat is designed or validated, one of the leading problems that must be tackled is the usability evaluation. Generally, the evaluation is based on usability heuristics that are done by experts and designers and involve a very complicated cycling process in which usability experts need to be included in the complete usability evaluation. On the other hand, there are several proposals for generating an automatic usability analysis that can be used by designers or end-users. However, they are limited by the methodologies that are implemented in the evaluation because usability evaluations necessitate a large amount of data abstraction, and the amount of processed information is enormous; As an alternative, Artificial Intelligence can help to solve this problem, especially machine learning techniques with deep learning capabilities that can reach a high level of data abstraction with a significant amount of information and implement an automatic usability evaluation based on images. Convolutional networks that are included in deep learning can classify complex problems, attain highly accurate results. This paper proposes to train a convolutional network with standard usability heuristics for evaluating usability, which is an easy method for evaluating usability in thermostats, based on images. The proposed automatic method gives excellent results for evaluating usability heuristics in the heuristic assigned. This paper provides a complete methodology, using deep learning, for automatically evaluating the usability heuristics of thermostats.",0,0,0.0,0,0.0,0.0,0.0,0,0.0
+A method and advisor tool for multimedia user interface design,https://doi.org/10.1016/j.ijhcs.2005.08.016,0.0,2005,0,0,0,0,0.0,0,0.0,0.0,0.0,0,0.0
+"Sara Bunian, Kai Li, Chaima Jemmali, Casper Harteveld, Yun Fu, and Magy Seif
+El-Nasr. 2021. VINS: Visual Search for Mobile User Interface Design.",0,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+LoFi Sketch: A Large Scale Dataset of Smartphone Low Fidelity Sketches,https://dl.acm.org/doi/10.1145/3491101.3519624,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+Bridging the Gap Between UX Practitioners’ Work Practices and AI-Enabled Design Support Tools,https://dl.acm.org/doi/10.1145/3491101.3519809,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+"Chunyang Chen, Ting Su, Guozhu Meng, Zhenchang Xing, and Yang Liu.
+2018. From UI Design Image to GUI Skeleton: A Neural Machine Transla-
+tor to Bootstrap Mobile GUI Implementation",https://doi.org/10.1145/3180155.3180240,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+"An
+Inventory and Predictions on the Use of Machine Learning Techniques for UX
+Research",https://doi.org/10.1145/3419249.3420163,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+Wordcraft: a Human-AI Collaborative Editor for Story Writing,0,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+"Translational Resources: Reducing the Gap Between Academic Research and HCI
+Practice",https://doi.org/10.1145/3064663.3064667,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+"Rapidly
+exploring application design through speed dating",https://doi.org/10.1007/978-3-540-74853-3_25,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+"Empirically Studying Participatory Sense-Making in Abstract
+Drawing with a Co-Creative Cognitive Agent",https://doi.org/10.1145/2856767.2856795,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+"A Com-
+puter Vision Tool to Generate Code Automatically from Graphical User Interface
+Sketches",0,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+"Akin: Generating UI Wireframes From UI Design Patterns Using Deep
+Learning.",https://doi.org/10.1145/3397482.3450727,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+"Metaphoria: An algorithmic compan-
+ion for metaphor creation.",0,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+FIND MORE HERE: https://dl.acm.org/doi/pdf/10.1145/3491101.3519809 and HERE: https://web.eecs.umich.edu/~xwanghci/papers/CHI21_expertblindspot.pdf,0,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+"Line of work from Amy Ko -- uncertainty in space, critiques and workshops",0,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0
+Programming tutor (python),"
+                        <a href=""https://web.eecs.umich.edu/~xwanghci/papers/CHI21_expertblindspot.pdf"">https://web.eecs.umich.edu/~xwanghci/papers/CHI21_expertblindspot.pdf</a>
+                    ",0.0,0,0,0,0,0,0.0,0,0.0,Here is some text<br>,0.0,0,0.0
+Supple Gajos et al.,0,0.0,0,0,0,0,0,0.0,0,0.0,0,0.0,0,0.0

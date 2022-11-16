@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{{ title }}</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+        <script src="{{ url_for('static', filename='paper.js') }}"></script>
+    </head>
+    <body>
+        <h1>{{ title }}</h1>
+        <div class="container">
+            {%for prop in props%}
+                <div class="prop {{ prop }}">
+                    <h2>{{ prop.replace('_', ' ') }}</h2>
+                    <div class="{{ props[prop][1] }}" data-prop="{{ prop }}">
+                        {{ props[prop][0]|safe }}
+                    </div>
+                </div>
+            {%endfor%}
+        </div>
+    </body>
+</html>
