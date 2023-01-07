@@ -1,0 +1,8 @@
+# OSX
+.DS_Store
+
+# Python
+.ipynb_checkpoints
+__pycache__
+*.pyc
+scratch.ipynb
